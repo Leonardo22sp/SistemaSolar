@@ -22,12 +22,12 @@ body {
 
 #sol {
   position: absolute;
-  width: 180px; /* Tamanho do Sol */
+  width: 180px;
   height: 180px;
 }
 
 #sol img {
-  width: 100%; /* Ajustar para caber no contêiner */
+  width: 100%;
   border-radius: 50%;
 }
 
@@ -37,61 +37,61 @@ body {
   background-size: cover;
 }
 
-/* Definindo cada planeta com suas distâncias e animações */
+
 #mercurio {
   width: 30px;
   height: 30px;
   background-image: url(https://i.gifer.com/origin/62/623d9fc17bcfcaf5136dc9e8cd0dd81e_w200.gif);
-  animation: orbital-mercurio 5s linear infinite;
+  animation: orbital-mercurio 25s linear infinite;
 }
 
 #venus {
   width: 40px;
   height: 40px;
   background-image: url(https://i.pinimg.com/originals/d3/aa/38/d3aa38b40948b7ca8c7ce2873e85fe01.gif);
-  animation: orbital-venus 7s linear infinite;
+  animation: orbital-venus 27s linear infinite;
 }
 
 #terra {
   width: 50px;
   height: 50px;
   background-image: url(https://phoneky.co.uk/thumbs/screensavers/down/nature/earth_i3jiri8r.gif);
-  animation: orbital-terra 10s linear infinite;
+  animation: orbital-terra 30s linear infinite;
 }
 
 #marte {
   width: 60px;
   height: 60px;
   background-image: url(https://pa1.aminoapps.com/7197/92da91a399fe02a09b83ec7ef6bca527ee651464r1-203-200_00.gif);
-  animation: orbital-marte 12s linear infinite;
+  animation: orbital-marte 32s linear infinite;
 }
 
 #jupiter {
   width: 70px;
   height: 70px;
   background-image: url(https://i.pinimg.com/originals/4e/8f/dc/4e8fdc7d0f2c1f644cf1849604adde23.gif);
-  animation: orbital-jupiter 15s linear infinite;
+  animation: orbital-jupiter 35s linear infinite;
 }
 
 #saturno {
   width: 80px;
   height: 80px;
   background-image: url(https://i.gifer.com/7YUC.gif);
-  animation: orbital-saturno 20s linear infinite;
+  animation: orbital-saturno 40s linear infinite;
 }
 
 #urano {
   width: 90px;
   height: 90px;
-  background-image: url(https://i.gifer.com/PAx.gif); /* URL do Urano */
-  animation: orbital-urano 25s linear infinite;
+  background-image: url(https://i.gifer.com/PAx.gif);
+  animation: orbital-urano 45s linear infinite;
 }
 
 #netuno {
   width: 90px;
   height: 90px;
-  background-image: url(https://guiadaalma.com.br/wp-content/uploads/2018/01/guia-da-alma-netuno-gif.gif); /* URL do Netuno */
-  animation: orbital-netuno 30s linear infinite;
+  background-image: url(https://guiadaalma.com.br/wp-content/uploads/2018/01/guia-da-alma-netuno-gif.gif);
+  animation: orbital-netuno 50s linear infinite;
 }
 
 @keyframes orbital-mercurio {
@@ -132,4 +132,52 @@ body {
 @keyframes orbital-netuno {
   0% { transform: rotate(0deg) translateX(610px) rotate(0deg); }
   100% { transform: rotate(360deg) translateX(610px) rotate(-360deg); }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.nave-espacial {
+  position: absolute;
+  width: 80px;
+  height: 50px;
+  background-image: url('https://i.imgur.com/C6L3DNW.png');
+  background-size: cover;
+  animation: mover-nave 40s linear infinite;
+}
+
+@keyframes mover-nave {
+  0% {
+    transform: translate(0, 0) rotate(0deg);
+  }
+  25% {
+    transform: translate(300px, -250px) rotate(45deg);
+  }
+  50% {
+    transform: translate(-500px, 300px) rotate(-90deg);
+  }
+  75% {
+    transform: translate(450px, 0px) rotate(135deg);
+  }
+  100% {
+    transform: translate(0, 0) rotate(180deg);
+  }
 }
