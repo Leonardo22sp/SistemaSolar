@@ -49,49 +49,49 @@ body {
   width: 40px;
   height: 40px;
   background-image: url(https://i.pinimg.com/originals/d3/aa/38/d3aa38b40948b7ca8c7ce2873e85fe01.gif);
-  animation: orbital-venus 27s linear infinite;
+  animation: orbital-venus 30s linear infinite;
 }
 
 #terra {
   width: 50px;
   height: 50px;
   background-image: url(https://phoneky.co.uk/thumbs/screensavers/down/nature/earth_i3jiri8r.gif);
-  animation: orbital-terra 30s linear infinite;
+  animation: orbital-terra 35s linear infinite;
 }
 
 #marte {
   width: 60px;
   height: 60px;
   background-image: url(https://pa1.aminoapps.com/7197/92da91a399fe02a09b83ec7ef6bca527ee651464r1-203-200_00.gif);
-  animation: orbital-marte 32s linear infinite;
+  animation: orbital-marte 40s linear infinite;
 }
 
 #jupiter {
   width: 70px;
   height: 70px;
   background-image: url(https://i.pinimg.com/originals/4e/8f/dc/4e8fdc7d0f2c1f644cf1849604adde23.gif);
-  animation: orbital-jupiter 35s linear infinite;
+  animation: orbital-jupiter 45s linear infinite;
 }
 
 #saturno {
   width: 80px;
   height: 80px;
   background-image: url(https://i.gifer.com/7YUC.gif);
-  animation: orbital-saturno 40s linear infinite;
+  animation: orbital-saturno 50s linear infinite;
 }
 
 #urano {
   width: 90px;
   height: 90px;
   background-image: url(https://i.gifer.com/PAx.gif);
-  animation: orbital-urano 45s linear infinite;
+  animation: orbital-urano 55s linear infinite;
 }
 
 #netuno {
   width: 90px;
   height: 90px;
   background-image: url(https://guiadaalma.com.br/wp-content/uploads/2018/01/guia-da-alma-netuno-gif.gif);
-  animation: orbital-netuno 50s linear infinite;
+  animation: orbital-netuno 60s linear infinite;
 }
 
 @keyframes orbital-mercurio {
@@ -162,6 +162,17 @@ body {
   background-image: url('https://i.imgur.com/C6L3DNW.png');
   background-size: cover;
   animation: mover-nave 40s linear infinite;
+  transition: animation 0.3s ease; /* Transição suave */
+}
+
+.descricao {
+  display: none; /* Oculta a descrição por padrão */
+  position: absolute;
+  background-color: white;
+  color: black;
+  padding: 10px;
+  border-radius: 5px;
+  font-size: 16px;
 }
 
 @keyframes mover-nave {
@@ -180,4 +191,13 @@ body {
   100% {
     transform: translate(0, 0) rotate(180deg);
   }
+}
+
+
+/* Mostra a descrição quando o mouse está em cima da nave */
+.nave-espacial:hover + .descricao {
+  display: block; /* Mostra a descrição */
+  top: 60px; /* Ajuste a posição da descrição conforme necessário */
+  left: 50%; /* Centraliza horizontalmente */
+  transform: translateX(-50%); /* Ajusta a posição para o centro */
 }
