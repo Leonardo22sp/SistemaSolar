@@ -162,11 +162,101 @@ body {
   background-image: url('https://i.imgur.com/C6L3DNW.png');
   background-size: cover;
   animation: mover-nave 40s linear infinite;
-  transition: animation 0.3s ease; /* Transição suave */
+  transition: animation 0.3s ease;
 }
 
-.descricao {
-  display: none; /* Oculta a descrição por padrão */
+.DescricaoNave {
+  display: none;
+  position: absolute;
+  background-color: white;
+  color: black;
+  padding: 10px;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.DescricaoMercurio {
+  display: none;
+  position: absolute;
+  background-color: white;
+  color: black;
+  padding: 10px;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.DescricaoVenus {
+  display: none;
+  position: absolute;
+  background-color: white;
+  color: black;
+  padding: 10px;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.DescricaoTerra {
+  display: none;
+  position: absolute;
+  background-color: white;
+  color: black;
+  padding: 10px;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.DescricaoMarte {
+  display: none;
+  position: absolute;
+  background-color: white;
+  color: black;
+  padding: 10px;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.DescricaoJupiter {
+  display: none;
+  position: absolute;
+  background-color: white;
+  color: black;
+  padding: 10px;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.DescricaoSaturno {
+  display: none;
+  position: absolute;
+  background-color: white;
+  color: black;
+  padding: 10px;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.DescricaoUrano {
+  display: none;
+  position: absolute;
+  background-color: white;
+  color: black;
+  padding: 10px;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.DescricaoNetuno {
+  display: none;
+  position: absolute;
+  background-color: white;
+  color: black;
+  padding: 10px;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.DescricaoSol {
+  display: none;
   position: absolute;
   background-color: white;
   color: black;
@@ -194,10 +284,73 @@ body {
 }
 
 
-/* Mostra a descrição quando o mouse está em cima da nave */
-.nave-espacial:hover + .descricao {
-  display: block; /* Mostra a descrição */
-  top: 60px; /* Ajuste a posição da descrição conforme necessário */
-  left: 50%; /* Centraliza horizontalmente */
-  transform: translateX(-50%); /* Ajusta a posição para o centro */
+
+.nave-espacial:hover + .DescricaoNave { 
+  display: block;
+  top: 60px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+#mercurio:hover + .DescricaoMercurio { 
+  display: block;
+  top: 60px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+#venus:hover + .DescricaoVenus { 
+  display: block;
+  top: 60px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+#terra:hover + .DescricaoTerra { 
+  display: block;
+  top: 60px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+#marte:hover + .DescricaoMarte { 
+  display: block;
+  top: 60px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+#jupiter:hover + .DescricaoJupiter { 
+  display: block;
+  top: 60px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+#saturno:hover + .DescricaoSaturno { 
+  display: block;
+  top: 60px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+#urano:hover + .DescricaoUrano { 
+  display: block;
+  top: 60px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+#netuno:hover + .DescricaoNetuno { 
+  display: block;
+  top: 60px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+#sol:hover + .DescricaoSol { 
+  display: block;
+  top: 60px;
+  left: 50%;
+  transform: translateX(-50%);
 }
