@@ -25,7 +25,7 @@ body {
 }
 
 .container-nomes a{
-  color: rgb(176, 176, 176);
+  color: rgb(194, 194, 194);
   
 }
 
@@ -154,9 +154,9 @@ body {
 
 .nave-espacial {
   position: absolute;
-  width: 80px;
+  width: 120px;
   height: 50px;
-  background-image: url(https://static.vecteezy.com/system/resources/previews/016/778/845/original/spaceship-alien-galaxy-fleet-free-png.png);
+  background-image: url(https://www.nicepng.com/png/full/426-4260930_cometa-investe-r-78-milhes-na-compra-de.png);
   background-size: cover;
   animation: mover-nave 40s linear infinite;
   transition: animation 0.3s ease;
@@ -512,4 +512,17 @@ body {
   75% {
       transform: scale(1.2) translateX(-5px);
   }
+}
+
+.check:hover {
+  transform: scale(1.2) rotate(2deg);
+  animation: crazy 1s infinite;
+}
+
+@keyframes crazy {
+  0% { transform: rotate(0deg); }
+  25% { transform: rotate(15deg); }
+  50% { transform: rotate(-15deg); }
+  75% { transform: rotate(12deg); }
+  100% { transform: rotate(0deg); }
 }
