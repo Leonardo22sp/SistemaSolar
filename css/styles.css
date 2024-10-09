@@ -156,7 +156,7 @@ body {
   position: absolute;
   width: 80px;
   height: 50px;
-  background-image: url('jandira.png');
+  background-image: url(https://static.vecteezy.com/system/resources/previews/016/778/845/original/spaceship-alien-galaxy-fleet-free-png.png);
   background-size: cover;
   animation: mover-nave 40s linear infinite;
   transition: animation 0.3s ease;
@@ -470,3 +470,68 @@ body {
     border-radius: 50%;
     border: 2px solid rgba(95, 60, 251, 0.498); 
 }  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* efeitos do cursor */
+#cursor {
+  position: absolute;
+  width: 10px; 
+  height: 10px;
+  background-color: rgba(0, 0, 0, 0.8); /* Cor do centro do cursor */
+  border-radius: 50%;
+  box-shadow: 0 0 15px 5px rgba(228, 20, 255, 0.5), /* Cor do brilho externo */
+              0 0 30px 10px rgba(255, 0, 0, 0.3), /* Cor secundária do brilho */
+              0 0 45px 15px rgba(0, 255, 255, 0.2); /* Terceira camada de brilho */
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+  z-index: 1000;
+}
+
+body, html {
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden; /* Evita a barra de rolagem */
+    color: #ffffff;
+    font-family: monospace;
+}
+
+#cursor {
+    position: fixed;
+    width: 10px; 
+    height: 10px; 
+    border-radius: 50%;
+    background: rgba(0, 0, 0, 0.596);
+    pointer-events: none; /* Ignora eventos de mouse */
+    transform: translate(-50%, -50%); /* Centraliza o cursor */
+    transition: background 0.3s ease; /* Efeito de transição */
+    z-index: 1000; /* Mantém o cursor acima de outros elementos */
+}

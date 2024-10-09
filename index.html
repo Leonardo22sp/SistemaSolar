@@ -5,9 +5,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Sistema Solar Animado</title>
   <link rel="stylesheet" href="css/styles.css">
+</style>
+
 </head>
 <body style="cursor: url(https://cdn.custom-cursor.com/db/cursor/32/Rocket_cursor.png) , default !important">
-    <input type="checkbox"id="animateButton" style="display: contents;" />
+  <div id="cursor"></div> <!-- Elemento do cursor neon -->  
+  <input type="checkbox"id="animateButton" style="display: contents;" />
     <label for="animateButton"class="button">Aparecer as Órbitas</label>
       <div class="linhas animatedElement" id="linha1"></div>
       <div class="linhas animatedElement" id="linha2"></div>
@@ -30,23 +33,87 @@
     </div>
     <div class="DescricaoSol">Sol!</div>
     <div class="planeta" id="mercurio"></div>
-    <div class="DescricaoMercurio">Mercúrio!</div>
+    <div class="DescricaoMercurio">Mercúrio! 
+      <br>-Planeta mais próximo do Sol.
+      <br>-Pequeno, rochoso e sem atmosfera significativa.
+      <br>-Dias muito quentes e noites extremamente frias devido à ausência de atmosfera densa para reter o calor.
+    </div>
     <div class="planeta" id="venus"></div>
-    <div class="DescricaoVenus">Vênus!</div>
+    <div class="DescricaoVenus">Vênus!
+      <br>-Quase do tamanho da Terra.
+      <br>-Atmosfera espessa composta principalmente de dióxido de carbono, criando um efeito estufa intenso.
+      <br>-Superfície extremamente quente, com temperaturas suficientes para derreter chumbo.
+    </div>
     <div class="planeta" id="terra"></div>
-    <div class="DescricaoTerra">Terra!</div>
+    <div class="DescricaoTerra">Terra!
+      <br>-O único planeta conhecido com vida.
+      <br>-Tem uma atmosfera rica em oxigênio e água em estado líquido.
+      <br>-Um equilíbrio perfeito de temperatura e proteção contra radiação graças à sua atmosfera e campo magnético.
+    </div>
     <div class="planeta" id="marte"></div> 
-    <div class="DescricaoMarte">Marte!</div>
+    <div class="DescricaoMarte">Marte!
+      <br>-Conhecido como o "planeta vermelho" por causa de sua superfície rica em óxido de ferro.
+      <br>-Tem calotas polares de gelo e possivelmente água subterrânea.
+      <br>-Atmosfera fina, composta principalmente de dióxido de carbono, e temperaturas muito frias.
+    </div>
     <div class="planeta" id="jupiter"></div>
-    <div class="DescricaoJupiter">Júpiter!</div>
+    <div class="DescricaoJupiter">Júpiter!
+      <br>-Maior planeta do Sistema Solar.
+      <br>-Gasoso, composto principalmente de hidrogênio e hélio.
+      <br>-Tem uma grande mancha vermelha, uma tempestade gigantesca que já dura séculos, e muitos satélites, incluindo Ganimedes, a maior lua do sistema solar.
+    </div>
     <div class="planeta" id="saturno"></div>
-    <div class="DescricaoSaturno">Saturno!</div>
+    <div class="DescricaoSaturno">Saturno!
+      <br>-Conhecido por seus icônicos anéis compostos de gelo e partículas rochosas.
+      <br>-Segundo maior planeta, também gasoso e composto principalmente de hidrogênio e hélio.
+      <br>-Possui dezenas de luas, incluindo Titã, que tem uma atmosfera espessa.
+    </div>
     <div class="planeta" id="urano"></div>
-    <div class="DescricaoUrano">Urano!</div>
+    <div class="DescricaoUrano">Urano!
+      <br>-Um gigante gasoso com uma cor azul-esverdeada devido à presença de metano em sua atmosfera.
+      <br>-Roda "de lado", com o eixo de rotação quase paralelo ao plano da sua órbita.
+      <br>-Tem anéis finos e é conhecido por suas estações extremamente longas.
+    </div>
     <div class="planeta" id="netuno"></div>
-    <div class="DescricaoNetuno">Netuno!</div>
+    <div class="DescricaoNetuno">Netuno!
+      <br>-O planeta mais distante do Sol.
+      <br>-Também tem uma cor azulada devido ao metano.
+      <br>-Conhecido por ventos extremamente fortes e uma atmosfera dinâmica com grandes tempestades, como a Grande Mancha Escura.
+    </div>
     <div class="nave-espacial"></div>
     <div class="DescricaoNave">Expresso Jandira</div>
   </div>
+</div>
+
+
+
+
+
+
+
+<script type="module">
+  import { neonCursor } from 'https://unpkg.com/threejs-toys@0.0.8/build/threejs-toys.module.cdn.min.js';
+
+  neonCursor({
+      el: document.body, // Aplica o efeito ao body da página
+      shaderPoints: 16,
+      curvePoints: 80,
+      curveLerp: 0.5,
+      radius1: 2,
+      radius2: 8,
+      velocityTreshold: 10,
+      sleepRadiusX: 100,
+      sleepRadiusY: 100,
+      sleepTimeCoefX: 0.0025,
+      sleepTimeCoefY: 0.0025
+  });
+
+  // Move o cursor personalizado ao redor da página
+  document.addEventListener('mousemove', (e) => {
+      const cursor = document.getElementById('cursor');
+      cursor.style.left = e.pageX + 'px';
+      cursor.style.top = e.pageY + 'px';
+  });
+</script>
 </body>
 </html>
