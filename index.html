@@ -5,11 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Sistema Solar Animado</title>
   <link rel="stylesheet" href="css/styles.css">
-</style>
-
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
 </head>
 <body style="cursor: url(https://cdn.custom-cursor.com/db/cursor/32/Rocket_cursor.png) , default !important">
-  <div id="cursor"></div> <!-- Elemento do cursor neon -->  
+  <div id="app">
   <input type="checkbox"id="animateButton" style="display: contents;" />
     <label for="animateButton"class="button">Aparecer as Órbitas</label>
       <div class="linhas animatedElement" id="linha1"></div>
@@ -22,16 +21,20 @@
       <div class="linhas animatedElement" id="linha8"></div>
   <div class="container-nomes">
     <h2>Produzido por "Os Crânios 🧠"</h2>
-    <a href="https://github.com/Leonardo22sp">Leonardo Silva</a>
-    <a href="https://github.com/kiqrr">Caique Rodrigues</a>
-    <a href="https://github.com/letsrosa">Letícia Rosa</a>
-    <a href="https://github.com/liandravcgomes">Liandra Gomes</a>
+    <a class="names" href="https://github.com/Leonardo22sp">Leonardo Silva</a>
+    <a class="names" href="https://github.com/kiqrr">Caique Rodrigues</a>
+    <a class="names" href="https://github.com/letsrosa">Letícia Rosa</a>
+    <a class="names" href="https://github.com/liandravcgomes">Liandra Gomes</a>
   </div>
     <div class="sistema-solar">
     <div id="sol">
       <img src="https://usagif.com/wp-content/uploads/gifs/sun-40.gif" alt="Sol">
     </div>
-    <div class="DescricaoSol">Sol!</div>
+    <div class="DescricaoSol">Sol!
+      <br>-O Sol tem um diâmetro de aproximadamente 1,39 milhão de quilômetros, sendo 109 vezes maior que a Terra.
+      <br>-A temperatura na superfície atinge 5.500°C, e no núcleo chega a 15 milhões de graus Celsius, onde ocorrem reações de fusão nuclear.
+      <br>-O Sol tem aproximadamente 4,6 bilhões de anos e está na metade de sua vida, com uma expectativa de viver cerca de 10 bilhões de anos.
+    </div>
     <div class="planeta" id="mercurio"></div>
     <div class="DescricaoMercurio">Mercúrio! 
       <br>-Planeta mais próximo do Sol.
@@ -84,36 +87,31 @@
     <div class="DescricaoNave">Expresso Jandira</div>
   </div>
 </div>
-
-
-
-
-
-
-
 <script type="module">
-  import { neonCursor } from 'https://unpkg.com/threejs-toys@0.0.8/build/threejs-toys.module.cdn.min.js';
+import { particlesCursor } from 'https://unpkg.com/threejs-toys@0.0.8/build/threejs-toys.module.cdn.min.js'
 
-  neonCursor({
-      el: document.body, // Aplica o efeito ao body da página
-      shaderPoints: 16,
-      curvePoints: 80,
-      curveLerp: 0.5,
-      radius1: 2,
-      radius2: 8,
-      velocityTreshold: 10,
-      sleepRadiusX: 100,
-      sleepRadiusY: 100,
-      sleepTimeCoefX: 0.0025,
-      sleepTimeCoefY: 0.0025
-  });
+const pc = particlesCursor({
+  el: document.getElementById('app'),
+  gpgpuSize: 512,
+  colors: [0x00ff00, 0x0000ff],
+  color: 0xff0000,
+  coordScale: 0.5,
+  noiseIntensity: 0.001,
+  noiseTimeCoef: 0.0001,
+  pointSize: 5,
+  pointDecay: 0.0025,
+  sleepRadiusX: 250,
+  sleepRadiusY: 250,
+  sleepTimeCoefX: 0.001,
+  sleepTimeCoefY: 0.002
+})
 
-  // Move o cursor personalizado ao redor da página
-  document.addEventListener('mousemove', (e) => {
-      const cursor = document.getElementById('cursor');
-      cursor.style.left = e.pageX + 'px';
-      cursor.style.top = e.pageY + 'px';
-  });
+document.body.addEventListener('click', () => {
+  pc.uniforms.uColor.value.set(Math.random() * 0xffffff)
+  pc.uniforms.uCoordScale.value = 0.001 + Math.random() * 2
+  pc.uniforms.uNoiseIntensity.value = 0.0001 + Math.random() * 0.001
+  pc.uniforms.uPointSize.value = 1 
+})
 </script>
 </body>
 </html>
