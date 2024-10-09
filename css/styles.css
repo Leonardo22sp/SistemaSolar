@@ -3,12 +3,30 @@
   padding: 0;
   box-sizing: border-box;
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  text-decoration: none;
 }
 
 body {
   background-image: url(https://i.gifer.com/68g.gif);
   background-size: cover;
   overflow: hidden;
+  cursor: url('teste.png'), auto;
+}
+
+.container-nomes {
+  position: absolute;
+  color: white;
+  z-index: 5;
+  display: flex;
+  flex-flow: column;
+  left: 4%;
+  top: 3%;
+  margin: 2px;
+}
+
+.container-nomes a{
+  color: rgb(176, 176, 176);
+  
 }
 
 .sistema-solar {
@@ -42,56 +60,56 @@ body {
   width: 30px;
   height: 30px;
   background-image: url(https://i.gifer.com/origin/62/623d9fc17bcfcaf5136dc9e8cd0dd81e_w200.gif);
-  animation: orbital-mercurio 25s linear infinite;
+  animation: orbital-mercurio 5s linear infinite;
 }
 
 #venus {
   width: 40px;
   height: 40px;
   background-image: url(https://i.pinimg.com/originals/d3/aa/38/d3aa38b40948b7ca8c7ce2873e85fe01.gif);
-  animation: orbital-venus 30s linear infinite;
+  animation: orbital-venus 10s linear infinite;
 }
 
 #terra {
   width: 50px;
   height: 50px;
   background-image: url(https://phoneky.co.uk/thumbs/screensavers/down/nature/earth_i3jiri8r.gif);
-  animation: orbital-terra 35s linear infinite;
+  animation: orbital-terra 15s linear infinite;
 }
 
 #marte {
   width: 60px;
   height: 60px;
   background-image: url(https://pa1.aminoapps.com/7197/92da91a399fe02a09b83ec7ef6bca527ee651464r1-203-200_00.gif);
-  animation: orbital-marte 40s linear infinite;
+  animation: orbital-marte 20s linear infinite;
 }
 
 #jupiter {
   width: 70px;
   height: 70px;
   background-image: url(https://i.pinimg.com/originals/4e/8f/dc/4e8fdc7d0f2c1f644cf1849604adde23.gif);
-  animation: orbital-jupiter 45s linear infinite;
+  animation: orbital-jupiter 25s linear infinite;
 }
 
 #saturno {
   width: 80px;
   height: 80px;
   background-image: url(https://i.gifer.com/7YUC.gif);
-  animation: orbital-saturno 50s linear infinite;
+  animation: orbital-saturno 30s linear infinite;
 }
 
 #urano {
   width: 90px;
   height: 90px;
   background-image: url(https://i.gifer.com/PAx.gif);
-  animation: orbital-urano 55s linear infinite;
+  animation: orbital-urano 35s linear infinite;
 }
 
 #netuno {
   width: 90px;
   height: 90px;
   background-image: url(https://guiadaalma.com.br/wp-content/uploads/2018/01/guia-da-alma-netuno-gif.gif);
-  animation: orbital-netuno 60s linear infinite;
+  animation: orbital-netuno 40s linear infinite;
 }
 
 @keyframes orbital-mercurio {
@@ -134,32 +152,11 @@ body {
   100% { transform: rotate(360deg) translateX(610px) rotate(-360deg); }
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 .nave-espacial {
   position: absolute;
   width: 80px;
   height: 50px;
-  background-image: url('https://i.imgur.com/C6L3DNW.png');
+  background-image: url('jandira.png');
   background-size: cover;
   animation: mover-nave 40s linear infinite;
   transition: animation 0.3s ease;
@@ -354,3 +351,163 @@ body {
   left: 50%;
   transform: translateX(-50%);
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.linhas {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+
+/* Estilos para o botão */
+.button {
+  z-index: 1000;
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: transparent;
+  color: #fff;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  position: absolute;
+  margin-top: 15%;
+  margin-right: 70%;
+  border: 2px solid white;
+}
+
+/* Estilo quando o botão está em foco */
+.button:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(52, 152, 219, 0.5);
+}
+
+/* Estilo quando o botão é pressionado */
+.button:active {
+  background-color: transparent;
+}
+
+/* Estilo quando o botão está marcado (animando) */
+#animateButton:checked + .button {
+  background-color: transparent;
+}
+
+/* Estilo para o elemento animado */
+#linha1 {
+  width: 240px;
+  height: 240px;
+  position: absolute;
+  opacity: 0; /* Começa com opacidade zero */
+  background-color: transparent;
+  border-radius: 50%;
+  border: 2px solid rgba(255, 255, 255, 0.501);
+}
+
+/* Aplica a animação quando o botão é marcado */
+#animateButton:checked ~ .animatedElement {
+  animation: aparecer 3s forwards; /* Animação de aparecer com duração de 3s */
+}
+
+@keyframes aparecer {
+  0% { opacity: 0; } /* Começa com opacidade zero */
+  100% { opacity: 1; } /* Termina com opacidade total */
+}
+
+
+
+
+
+#linha2 {
+  width: 317px;
+  height: 317px;
+  position: absolute;
+  opacity: 0;
+  background-color: transparent;
+  border-radius: 50%;
+  border: 2px solid rgba(218, 121, 57, 0.5);
+}
+
+#linha3 {
+  width: 464px;
+  height: 464px;
+  position: absolute;
+  background-color: transparent;
+  opacity: 0;
+  border-radius: 50%;
+  border: 2px solid rgba(73, 163, 215, 0.498); }
+
+#linha4 {
+  width: 590px;
+  height: 590px;
+  position: absolute;
+  background-color: transparent;
+  opacity: 0;
+  border-radius: 50%;
+  border: 2px solid rgba(204, 155, 50, 0.501); }
+
+#linha5 {
+  width: 725px;
+  height: 725px;
+  position: absolute;
+  background-color: transparent;
+  opacity: 0;
+  border-radius: 50%;
+  border: 2px solid rgba(254, 173, 125, 0.498); }
+
+#linha6 {
+  width: 900px;
+  height: 900px;
+  position: absolute;
+  background-color: transparent;
+  opacity: 0;
+  border-radius: 50%;
+  border: 2px solid rgba(211, 195, 131, 0.498); }
+
+#linha7{
+  width: 1070px;
+  height: 1070px;
+  position: absolute;
+  background-color: transparent;
+  opacity: 0;
+  border-radius: 50%;
+  border: 2px solid rgba(60, 196, 189, 0.498);
+}
+
+#linha8{
+    width: 1230px;
+    height: 1230px;
+    position: absolute;
+    opacity: 0;
+    background-color: transparent;
+    border-radius: 50%;
+    border: 2px solid rgba(95, 60, 251, 0.498); 
+}  
